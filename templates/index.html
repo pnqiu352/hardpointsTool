@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3D Hardpoint Tool</title>
+    <style>
+        body { font-family: monospace; margin: 30px; }
+        input, select, button { margin: 5px; }
+        pre { background: #f0f0f0; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Distance Between Two Points</h2>
+    <input id="p1" placeholder="Point 1 (x,y,z)">
+    <input id="p2" placeholder="Point 2 (x,y,z)">
+    <select id="unit1">
+        <option value="mm">mm</option>
+        <option value="m">m</option>
+    </select>
+    <button onclick="calcDistance()">Calculate</button>
+    <p id="distanceResult"></p>
+
+    <hr>
+
+    <h2>Format Hardpoint</h2>
+    <input id="hpName" placeholder="Hardpoint Name (e.g. HP_FL)">
+    <input id="hpPoint" placeholder="Point (x,y,z)">
+    <select id="unit2">
+        <option value="mm">mm</option>
+        <option value="m">m</option>
+    </select>
+    <button onclick="formatHP()">Format</button>
+    <button onclick="copyToClipboard()">Copy</button>
+    <pre id="formattedHP"></pre>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
